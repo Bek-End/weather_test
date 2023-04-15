@@ -79,7 +79,7 @@ class _UpdateIconWidgetState extends State<_UpdateIconWidget> with TickerProvide
     return FloatingActionButton(
       onPressed: () {
         widget.onTap.call();
-        _controller.forward();
+        _controller.forward().then((value) => _controller.reset());
       },
       child: RotationTransition(
         turns: _animation,
