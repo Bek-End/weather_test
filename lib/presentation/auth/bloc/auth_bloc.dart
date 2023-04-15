@@ -10,7 +10,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
     on<AuthInitEvent>((event, emit) async {
       final hasToken = await authUsecase.hasToken();
-
       emit(hasToken ? AuthCompleteState() : AuthLogInState());
     });
 
@@ -19,13 +18,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         username: event.username,
         password: event.password,
       );
-
       add(AuthInitEvent());
     });
 
     on<AuthLogOutEvent>((event, emit) async {
       await authUsecase.logOut();
-
       emit(AuthLogInState());
     });
   }

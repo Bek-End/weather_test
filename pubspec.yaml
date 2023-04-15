@@ -19,12 +19,24 @@ dependencies:
   flutter_bloc: ^8.1.2
   equatable: ^2.0.5
   rxdart: ^0.27.7
+  retrofit: ^4.0.1
+  hive: ^2.2.3
+  dio: ^5.1.1
+  freezed: ^2.3.2
+  location: ^4.4.0
+  path_provider: ^2.0.14
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  json_serializable: ^6.6.1
+  retrofit_generator: ^6.0.0+1
+  freezed_annotation: ^2.2.0
+  hive_generator: ^2.0.0
 
 flutter_icons:
   android: "app_icon"

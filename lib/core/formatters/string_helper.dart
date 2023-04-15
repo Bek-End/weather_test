@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 abstract class StringHelper {
   const StringHelper._();
 
@@ -9,5 +11,9 @@ abstract class StringHelper {
 
   static bool isEmailValid(String? value) {
     return !isNullOrEmpty(value) && _emailRegExp.hasMatch(value!);
+  }
+
+  static String formattedDate(DateTime dateTime) {
+    return DateFormat('dd.MM.yyyy HH:mm').format(dateTime);
   }
 }

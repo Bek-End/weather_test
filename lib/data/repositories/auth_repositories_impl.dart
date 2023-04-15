@@ -1,7 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:it_fox_test/domain/repositories/auth_repository.dart';
 
-class AuthRepositoryImpl extends AuthRepository {
+class AuthRepositoryImpl implements AuthRepository {
   final _apiKey = 'cef311b3965116d22980baa2ecf4f777';
   final _autorizedUser = 'test@test.org';
 
@@ -22,7 +22,7 @@ class AuthRepositoryImpl extends AuthRepository {
   }
 }
 
-class TokenRepositoryImpl extends TokenRepository {
+class TokenRepositoryImpl implements TokenRepository {
   final _storage = const FlutterSecureStorage(
     aOptions: AndroidOptions(encryptedSharedPreferences: true),
   );

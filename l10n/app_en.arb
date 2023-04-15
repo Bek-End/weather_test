@@ -2,5 +2,10 @@
     "auth": "Authorization",
     "email": "Email",
     "password": "password",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "temperature": "Temperature",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "weather": "Weather",
+    "lastUpdate": "Last update"
 }
