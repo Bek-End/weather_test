@@ -7,6 +7,22 @@ export 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 late GlobalKey<NavigatorState> globalKey;
 
+class FlavorConfig extends StatelessWidget {
+  const FlavorConfig({
+    required this.flavorName,
+    required this.child,
+    super.key,
+  });
+
+  final String flavorName;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   AppLocator.getItInit();

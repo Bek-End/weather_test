@@ -1,5 +1,8 @@
 .fvm/flutter_sdk
 
+lib/**/*.freezed.dart
+lib/**/*.g.dart
+
 # Miscellaneous
 *.class
 *.log
