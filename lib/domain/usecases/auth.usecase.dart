@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:get_it/get_it.dart';
 import 'package:it_fox_test/core/widgets/error_overlay.dart';
 import 'package:it_fox_test/domain/repositories/auth_repository.dart';
@@ -19,7 +20,8 @@ class AuthUsecase {
       );
 
       await _tokenRepository.writeToken(token);
-    } catch (e) {
+    } catch (e, stack) {
+      FirebaseCrashlytics.instance.recordError(e, stack, fatal: true);
       showError((e).toString());
     }
   }
