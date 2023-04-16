@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:it_fox_test/domain/repositories/auth_repository.dart';
 
@@ -12,6 +13,7 @@ class AuthRepositoryImpl implements AuthRepository {
   }) async {
     if (username == _autorizedUser) return _apiKey;
 
+    FirebaseCrashlytics.instance.recordError('User not found', StackTrace.empty);
     throw Exception('User not found');
   }
 

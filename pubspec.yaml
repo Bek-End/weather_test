@@ -26,6 +26,9 @@ dependencies:
   location: ^4.4.0
   path_provider: ^2.0.14
   intl: ^0.17.0
+  firebase_crashlytics: ^3.1.0
+  firebase_messaging: ^14.4.0
+  firebase_core: ^2.9.0
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +45,9 @@ flutter_icons:
   android: "app_icon"
   ios: true
   image_path: "assets/app-icon.png"
+  web:
+    generate: true
+    image_path: "assets/app-icon.png"
 
 flutter:
   uses-material-design: true

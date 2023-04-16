@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:get_it/get_it.dart';
 import 'package:it_fox_test/core/widgets/error_overlay.dart';
 import 'package:it_fox_test/data/dto/weather_queries_dto.dart';
@@ -19,7 +20,8 @@ class WeatherUsecase {
       final lastWeatherRes = await _getLastWeatherRes();
       if (lastWeatherRes != null) return lastWeatherRes;
       return await updateWeather(lat: lat, lon: lon);
-    } catch (e) {
+    } catch (e, stack) {
+      FirebaseCrashlytics.instance.recordError(e, stack, fatal: true);
       showError(e.toString());
     }
     return null;

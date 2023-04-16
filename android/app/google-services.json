@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "848462754126",
+    "project_id": "itfox-test",
+    "storage_bucket": "itfox-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848462754126:android:563ffbc3d6faff8d806e1f",
+        "android_client_info": {
+          "package_name": "com.example.it_fox_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848462754126-ane5fta79ho9bv35v01ro3tqumemh16j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwuoR3O7yWIdXFwExcMEMEJ1XEfoV48oQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848462754126-ane5fta79ho9bv35v01ro3tqumemh16j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "848462754126-o86emfps0ehjsh1fumlcm183mnbd0642.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.itFoxTest.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
