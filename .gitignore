@@ -1,5 +1,9 @@
 .fvm/flutter_sdk
+ios/Runner/GoogleService-Info.plist
+macos/Runner/GoogleService-Info.plist
+android/app/google-services.json
 
+lib/firebase_options.dart
 lib/**/*.freezed.dart
 lib/**/*.g.dart
 
