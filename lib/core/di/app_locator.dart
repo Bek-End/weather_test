@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 import 'package:it_fox_test/data/repositories/auth_repositories_impl.dart';
@@ -33,7 +36,7 @@ class AppLocator {
   }
 
   static Future<void> hiveInit() async {
-    final appDocumentDir = await getApplicationDocumentsDirectory();
+    final appDocumentDir = kIsWeb ? Directory('/assets/db') :  await getApplicationDocumentsDirectory();
     Hive.init(appDocumentDir.path);
     Hive.registerAdapter(WeatherEntityAdapter());
   }
